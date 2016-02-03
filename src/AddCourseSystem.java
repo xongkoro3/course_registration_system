@@ -180,6 +180,8 @@ public class AddCourseSystem {
             System.err.println("SQLException: " + err.getMessage());
             return false;
         }
+        if(creditsList2.size() == 0)
+            return false;
         int coursecredits = Integer.valueOf(creditsList2.get(0).get(0).toString());
 
         int fcredits = studentcredits + coursecredits;

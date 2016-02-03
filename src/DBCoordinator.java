@@ -122,7 +122,6 @@ public class DBCoordinator {
 		con.commit();
 
 		prepStmt.close();
-		System.out.println("I m here");
 		con.close();
 
 		System.out.println("Records created successfully");

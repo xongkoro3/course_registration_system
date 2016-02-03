@@ -46,6 +46,10 @@ public class SCRSImpl implements SCRS {
             System.out.println("Unauthorized Type!");
             return new ArrayList<ArrayList<String>>();
         }
+        if(token.type == ShibbolethAuth.Token.RoleType.STUDENT && token.id != studentID){
+            System.out.println("You don't have authorization to check other's information.");
+            return new ArrayList<>();
+        }
         InfoSystem infoSystem = new InfoSystem();
         return infoSystem.queryStudentPersonalData(studentID);
     }
@@ -62,6 +66,10 @@ public class SCRSImpl implements SCRS {
         if (token.type != ShibbolethAuth.Token.RoleType.STUDENT && token.type != ShibbolethAuth.Token.RoleType.ADMIN && token.type != ShibbolethAuth.Token.RoleType.BOTH) {
             System.out.println("Unauthorized Type!");
             return new ArrayList<ArrayList<String>>();
+        }
+        if(token.type == ShibbolethAuth.Token.RoleType.STUDENT && token.id != studentID){
+            System.out.println("You don't have auth to check other's info.");
+            return new ArrayList<>();
         }
         InfoSystem infoSystem = new InfoSystem();
         return infoSystem.queryStudentRegistrationHistory(studentID);

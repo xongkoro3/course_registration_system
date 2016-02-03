@@ -87,11 +87,13 @@ public class SQLiteJDBC
       stmt.executeUpdate(createShibbolethAuthTableSql);
       
       stmt.close();
-      c.close();
     } catch ( Exception e ) {
     	e.printStackTrace();
       //System.err.println( e.getClass().getName() + ": " + e.getMessage() );
       //System.exit(0);
+    }
+    final {
+      c.close();
     }
     System.out.println("Table created successfully");
   }
