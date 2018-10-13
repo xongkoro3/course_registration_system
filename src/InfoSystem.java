@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by zhixingma on 12/7/15.
- */
-
-/**
  * @version 1.0
  * @since 12/08/2015
  */

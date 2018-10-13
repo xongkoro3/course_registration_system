@@ -6,9 +6,6 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by zhixingma on 12/8/15.
- */
 public class CommonMethodTest {
 
     SCRSImpl test = new SCRSImpl();
